@@ -21,12 +21,6 @@ export default function Navbar() {
         </li>
 
         <li class="px-2 md:px-4">
-          <Link to="/contact" class="text-gray-500 font-semibold hover:text-green-600">
-            Contact
-          </Link>
-        </li>
-
-        <li class="px-2 md:px-4">
           <Link to="/login" class="text-gray-500 font-semibold hover:text-green-600">Login</Link>
         </li>
 
@@ -38,6 +32,12 @@ export default function Navbar() {
 
         <li class="px-2 md:px-4 hidden md:block">
           <a class="text-gray-500 font-semibold hover:text-green-600">Search</a>
+        </li>
+
+        <li class="px-2 md:px-4">
+          <Link to="/contact" class="text-gray-500 font-semibold hover:text-green-600">
+            Contact
+          </Link>
         </li>
 
       </ul>
