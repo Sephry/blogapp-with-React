@@ -1,8 +1,7 @@
 export default function ContactScreen(params) {
-
-    return (
+    return(
         <>
-        Contact Screen
+        ContactScreen
         </>
-    );
+    )
 }

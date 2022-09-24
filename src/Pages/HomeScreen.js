@@ -23,14 +23,12 @@ export default function HomeScreen(params) {
             regret. Stimulated discretion impossible admiration in particular
             conviction up.
           </p>
-          
           <Link
             to="/post"
             class="inline-block px-6 py-3 mt-2 mb-20 rounded-md bg-green-700 text-gray-100"
           >
             Read more
           </Link>
-
         </div>
 
         <div class="w-full md:w-4/7">
@@ -122,7 +120,7 @@ export default function HomeScreen(params) {
         </a>
       </div>
       <div class="block space-x-0 lg:flex lg:space-x-6">
-        <div class="rounded w-full lg:w-1/2 lg:w-1/3 p-4 lg:p-0">
+        <div class="rounded w-full p-4 lg:p-0">
           <img
             src="https://images.unsplash.com/photo-1526666923127-b2970f64b422?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60"
             class="rounded"
@@ -145,7 +143,7 @@ export default function HomeScreen(params) {
           </div>
         </div>
 
-        <div class="rounded w-full lg:w-1/2 lg:w-1/3 p-4 lg:p-0">
+        <div class="rounded w-full  p-4 lg:p-0">
           <img
             src="https://images.unsplash.com/photo-1504384764586-bb4cdc1707b0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60"
             class="rounded"
@@ -167,7 +165,7 @@ export default function HomeScreen(params) {
           </div>
         </div>
 
-        <div class="rounded w-full lg:w-1/2 lg:w-1/3 p-4 lg:p-0">
+        <div class="rounded w-full  p-4 lg:p-0">
           <img
             src="https://images.unsplash.com/photo-1483058712412-4245e9b90334?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2100&q=80"
             class="rounded"
@@ -227,7 +225,7 @@ export default function HomeScreen(params) {
         </a>
       </div>
       <div class="block space-x-0 lg:flex lg:space-x-6">
-        <div class="rounded w-full lg:w-1/2 lg:w-1/3 p-4 lg:p-0">
+        <div class="rounded w-full p-4 lg:p-0">
           <img
             src="https://images.unsplash.com/photo-1526666923127-b2970f64b422?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60"
             class="rounded"
@@ -250,7 +248,7 @@ export default function HomeScreen(params) {
           </div>
         </div>
 
-        <div class="rounded w-full lg:w-1/2 lg:w-1/3 p-4 lg:p-0">
+        <div class="rounded w-full  p-4 lg:p-0">
           <img
             src="https://images.unsplash.com/photo-1504384764586-bb4cdc1707b0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60"
             class="rounded"
@@ -272,7 +270,7 @@ export default function HomeScreen(params) {
           </div>
         </div>
 
-        <div class="rounded w-full lg:w-1/2 lg:w-1/3 p-4 lg:p-0">
+        <div class="rounded w-full  p-4 lg:p-0">
           <img
             src="https://images.unsplash.com/photo-1483058712412-4245e9b90334?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2100&q=80"
             class="rounded"

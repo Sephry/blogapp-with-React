@@ -1,19 +1,20 @@
 import React from "react";
+import { Route, Routes, Link, NavLink } from "react-router-dom";
+
 import Footer from "./Components/Footer";
-import HomeScreen from "./Pages/HomeScreen";
 import Navbar from "./Components/Navbar";
+
+import HomeScreen from "./Pages/HomeScreen";
 import PostScreen from "./Pages/PostScreen";
 import ContactScreen from "./Pages/ContactScreen";
 import AboutScreen from "./Pages/AboutScreen";
 import LoginScreen from "./Pages/LoginScreen";
 import RegisterScreen from "./Pages/RegisterScreen";
 
-import { Route, Routes, Link, NavLink } from "react-router-dom";
 
 function App() {
   return (
     <div class="max-w-screen-lg mx-auto">
-
       <Navbar />
 
       <Routes>
@@ -26,7 +27,6 @@ function App() {
       </Routes>
 
       <Footer />
-
     </div>
   );
 }
