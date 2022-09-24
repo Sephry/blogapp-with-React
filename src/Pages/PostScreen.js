@@ -1,12 +1,11 @@
+import PostTitle from "../Components/PostTitle";
+
 export default function PostScreen(params) {
   return (
     <main class="mt-10">
+      <PostTitle />
       <div class="mb-4 md:mb-0 w-full mx-auto relative">
         <div class="px-4 lg:px-0">
-          <h2 class="text-4xl font-semibold text-gray-800 leading-tight">
-            Pellentesque a consectetur velit, ac molestie ipsum. Donec sodales,
-            massa et auctor.
-          </h2>
           <a class="py-2 text-green-700 inline-flex items-center justify-center mb-2">
             Cryptocurrency
           </a>
