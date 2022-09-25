@@ -1,13 +1,13 @@
 import React from "react";
 
 import Footer from "./Components/Footer";
-import Navbar from "./Components/Navbar";
+import Navbar from "./Components/NavBar";
 
 import PageRoutes from "./Routes/PageRoutes";
 
 function App() {
   return (
-    <div class="max-w-screen-xl mx-auto">
+    <div className="max-w-screen-xl mx-auto">
       <Navbar />
 
       <PageRoutes />

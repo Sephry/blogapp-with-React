@@ -1,54 +1,44 @@
 import { Link } from "react-router-dom";
+import SearcBar from "./SearchBar";
 
 export default function Navbar() {
   return (
     <header className="flex items-center justify-between py-4 border-b-2 ">
 
-      <Link to="/" class="px-2 lg:px-0 font-bold capitalize text-2xl"> Sephry Blog </Link>
+      <Link to="/" className="px-2 lg:px-0 font-bold capitalize text-2xl"> Sephry Blog </Link>
 
-      <button class="block md:hidden px-2 text-3xl">
-        <i class="bx bx-menu"></i>
+      <button className="block md:hidden px-2 text-3xl">
+        <i className="bx bx-menu"></i>
       </button>
 
-      <ul class="hidden md:inline-flex items-center">
+      <ul className="hidden md:inline-flex items-center">
 
-        <li class="px-2 md:px-4">
-          <Link to="/" class="text-green-800 font-semibold hover:text-green-600">Home</Link>
+        <li className="px-2 md:px-4">
+          <Link to="/" className="text-green-800 font-semibold hover:text-green-600">Home</Link>
         </li>
 
-        <li class="px-2 md:px-4">
-          <Link to="/about" class="text-gray-500 font-semibold hover:text-green-600">About</Link>
+        <li className="px-2 md:px-4">
+          <Link to="/about" className="text-gray-500 font-semibold hover:text-green-600">About</Link>
         </li>
 
-        <li class="px-2 md:px-4">
-          <Link to="/contact" class="text-gray-500 font-semibold hover:text-green-600">
+        <li className="px-2 md:px-4">
+          <Link to="/contact" className="text-gray-500 font-semibold hover:text-green-600">
             Contact
           </Link>
         </li>
 
-        <li class="px-2 md:px-4">
-          <Link to="/login" class="text-gray-500 font-semibold hover:text-green-600">Login</Link>
+        <li className="px-2 md:px-4">
+          <Link to="/login" className="text-gray-500 font-semibold hover:text-green-600">Login</Link>
         </li>
 
-        <li class="px-2 md:px-4 hidden md:block">
-          <Link to="/register" class="text-gray-500 font-semibold hover:text-green-600">
+        <li className="px-2 md:px-4 hidden md:block">
+          <Link to="/register" className="text-gray-500 font-semibold hover:text-green-600">
             Register
           </Link>
         </li>
 
-        <li class="px-2 md:px-4 hidden md:block">
-          <div class="flex justify-center">
-            <div class=" xl:w-75">
-              <div class="input-group relative flex flex-wrap items-stretch w-full rounded">
-                <input type="search" class="form-control relative flex-auto min-w-0 block px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" placeholder="Search" aria-label="Search" aria-describedby="button-addon2" />
-                <span class="input-group-text flex items-center px-3 py-1.5 text-base font-normal text-gray-700 text-center whitespace-nowrap rounded" id="basic-addon2">
-                  <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="w-4" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                    <path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"></path>
-                  </svg>
-                </span>
-              </div>
-            </div>
-          </div>
+        <li className="px-2 md:px-4 hidden md:block">
+          <SearcBar />
         </li>
 
       </ul>
