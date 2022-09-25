@@ -7,7 +7,7 @@ import PageRoutes from "./Routes/PageRoutes";
 
 function App() {
   return (
-    <div class="max-w-screen-lg mx-auto">
+    <div class="max-w-screen-xl mx-auto">
       <Navbar />
 
       <PageRoutes />
