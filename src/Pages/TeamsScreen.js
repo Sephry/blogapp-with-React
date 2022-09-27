@@ -12,9 +12,9 @@ export default function TeamsScreen(params) {
 
                 <div class="flex items-center justify-center">
                     <div class="flex items-center p-1 border border-blue-600 ">
-                        <button class="px-4 py-2 text-sm font-medium text-white capitalize bg-blue-600 md:py-3 rounded-xl md:px-12">Author</button>
-                        <button class="px-4 py-2 mx-4 text-sm font-medium text-blue-600 capitalize transition-colors duration-300 md:py-3 focus:outline-none hover:bg-blue-600 hover:text-white rounded-xl md:mx-8 md:px-12">development</button>
-                        <button class="px-4 py-2 text-sm font-medium text-blue-600 capitalize transition-colors duration-300 md:py-3 focus:outline-none hover:bg-blue-600 hover:text-white rounded-xl md:px-12">marketing</button>
+                        <a class="px-4 py-2 text-sm font-medium text-white capitalize bg-blue-600 md:py-3 rounded-xl md:px-12">Author</a>
+                        <a class="px-4 py-2 mx-4 text-sm font-medium text-blue-600 capitalize transition-colors duration-300 md:py-3 focus:outline-none hover:bg-blue-600 hover:text-white rounded-xl md:mx-8 md:px-12">development</a>
+                        <a class="px-4 py-2 text-sm font-medium text-blue-600 capitalize transition-colors duration-300 md:py-3 focus:outline-none hover:bg-blue-600 hover:text-white rounded-xl md:px-12">marketing</a>
                     </div>
                 </div>
 
@@ -166,7 +166,7 @@ export default function TeamsScreen(params) {
                             </a>
                         </div>
                     </div>
-                    
+
                 </div>
 
 
