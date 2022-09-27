@@ -5,7 +5,8 @@ import Navbar from "./Components/NavBar";
 
 import PageRoutes from "./Routes/PageRoutes";
 
-function App() {
+const App = () => {
+
   return (
     <div className="max-w-screen-xl mx-auto">
       <Navbar />

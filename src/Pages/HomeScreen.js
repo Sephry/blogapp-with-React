@@ -1,10 +1,43 @@
 import { Link } from "react-router-dom";
+import Pagination from "../Components/Pagination";
+import PostsCard from "../Components/PostsCard"
+import React from "react";
+import axios from "axios";
+import { useEffect, useState } from "react";
+import NewsletterCard from "../Components/NewsletterCard";
 
-export default function HomeScreen(params) {
+
+const HomeScreen = (params) => {
+
+  const [posts, setPosts] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [postsPerPage] = useState(8)
+
+  useEffect(() => {
+    const fetchPosts = async () => {
+      setLoading(true);
+      const res = await axios.get("https://jsonplaceholder.typicode.com/posts");
+      setPosts(res.data);
+      setLoading(false);
+    };
+
+    fetchPosts();
+  }, []);
+
+  // Get current posts
+  const indexOfLastPost = currentPage * postsPerPage;
+  const indexOfFirstPost = indexOfLastPost - postsPerPage;
+  const currentPosts = posts.slice(indexOfFirstPost, indexOfLastPost);
+
+  // Change page
+  const paginate = (pageNumber) => setCurrentPage(pageNumber);
+
+
   return (
     <main className="mt-12">
-      <div className="flex flex-wrap md:flex-no-wrap space-x-0 md:space-x-6 mb-16">
 
+      <div className="flex flex-wrap md:flex-no-wrap space-x-0 md:space-x-6">
         <div className="mb-4 lg:mb-0 p-4 lg:p-0 w-full md:w-4/7 relative rounded block">
           <img
             src="https://images.unsplash.com/photo-1427751840561-9852520f8ce8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60"
@@ -31,117 +64,16 @@ export default function HomeScreen(params) {
             Read more
           </Link>
         </div>
-
-        <div className="w-full md:w-4/7">
-          <div className="rounded w-full flex flex-col md:flex-row mb-10">
-            <img
-              src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60"
-              className="block md:hidden lg:block rounded-md h-64 md:h-32 m-4 md:m-0"
-            />
-            <div className="bg-white rounded px-4">
-              <span className="text-green-700 text-sm hidden md:block">
-                Gadgets
-              </span>
-              <div className="md:mt-0 text-gray-800 font-semibold text-xl mb-2">
-                At every tiled on ye defer do. No attention suspected oh
-                difficult.
-              </div>
-              <p className="block md:hidden p-2 pl-0 pt-1 text-sm text-gray-600">
-                Wonder matter now can estate esteem assure fat roused. Am
-                performed on existence as discourse is. Pleasure friendly at
-                marriage blessing or
-              </p>
-            </div>
-          </div>
-
-          <div className="rounded w-full flex flex-col md:flex-row mb-10">
-            <img
-              src="https://images.unsplash.com/photo-1531297484001-80022131f5a1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60"
-              className="block md:hidden lg:block rounded-md h-64 md:h-32 m-4 md:m-0"
-            />
-            <div className="bg-white rounded px-4">
-              <span className="text-green-700 text-sm hidden md:block">
-                Bitcoin
-              </span>
-              <div className="md:mt-0 text-gray-800 font-semibold text-xl mb-2">
-                Fond his say old meet cold find come whom. The sir park sake
-                bred.
-              </div>
-              <p className="block md:hidden p-2 pl-0 pt-1 text-sm text-gray-600">
-                Integer commodo, sapien ut vulputate viverra, Integer commodo
-                Integer commodo, sapien ut vulputate viverra, Integer commodo
-              </p>
-            </div>
-          </div>
-          <div className="rounded w-full flex flex-col md:flex-row mb-10">
-            <img
-              src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60"
-              className="block md:hidden lg:block rounded-md h-64 md:h-32 m-4 md:m-0"
-            />
-            <div className="bg-white rounded px-4">
-              <span className="text-green-700 text-sm hidden md:block">
-                Insights
-              </span>
-              <div className="md:mt-0 text-gray-800 font-semibold text-xl mb-2">
-                Advice me cousin an spring of needed. Tell use paid law ever yet
-                new.
-              </div>
-              <p className="block md:hidden p-2 pl-0 pt-1 text-sm text-gray-600">
-                Meant to learn of vexed if style allow he there. Tiled man stand
-                tears ten joy there terms any widen.
-              </p>
-            </div>
-          </div>
-          <div className="rounded w-full flex flex-col md:flex-row mb-10">
-            <img
-              src="https://images.unsplash.com/photo-1489844097929-c8d5b91c456e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60"
-              className="block md:hidden lg:block rounded-md h-64 md:h-32 m-4 md:m-0"
-            />
-            <div className="bg-white rounded px-4">
-              <span className="text-green-700 text-sm hidden md:block">
-                Cryptocurrency
-              </span>
-              <div className="md:mt-0 text-gray-800 font-semibold text-xl mb-2">
-                Advice me cousin an spring of needed. Tell use paid law ever yet
-                new.
-              </div>
-              <p className="block md:hidden p-2 pl-0 pt-1 text-sm text-gray-600">
-                Meant to learn of vexed if style allow he there. Tiled man stand
-                tears ten joy there terms any widen.
-              </p>
-            </div>
-          </div>
-        </div>
       </div>
 
-      <div className="rounded flex md:shadow mt-12">
-        <img
-          src="https://images.unsplash.com/photo-1579275542618-a1dfed5f54ba?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60"
-          className="w-0 md:w-1/4 object-cover rounded-l"
+      <div >
+        <PostsCard posts={currentPosts} />
+        <Pagination
+          postsPerPage={postsPerPage}
+          totalPosts={posts.length}
+          paginate={paginate}
+          currentPage={currentPage}
         />
-        <div className="px-4 py-2">
-          <h3 className="text-3xl text-gray-800 font-bold">
-            Subscribe to newsletter
-          </h3>
-          <p className="text-xl text-gray-700">
-            We sent latest news and posts once in every week, fresh from the
-            oven
-          </p>
-          <form className="mt-4 mb-10">
-            <input
-              type="email"
-              className="rounded bg-gray-100 px-4 py-2 border focus:border-green-400"
-              placeholder="john@tech.com"
-            />
-            <button className="px-4 py-2 rounded bg-green-800 text-gray-100">
-              Subscribe
-              <i className="bx bx-right-arrow-alt"></i>
-            </button>
-            <p className="text-green-900 opacity-50 text-sm mt-1">
-              No spam. We promise
-            </p>
-          </form>
-        </div>
       </div>
 
       <div className="flex mt-16 mb-4 px-4 lg:px-0 items-center justify-between">
@@ -150,6 +82,7 @@ export default function HomeScreen(params) {
           View all
         </a>
       </div>
+
       <div className="block space-x-0 lg:flex lg:space-x-6">
         <div className="rounded w-full p-4 lg:p-0">
           <img
@@ -218,6 +151,11 @@ export default function HomeScreen(params) {
           </div>
         </div>
       </div>
+
+      <NewsletterCard />
+
     </main>
   );
 }
+
+export default HomeScreen;
