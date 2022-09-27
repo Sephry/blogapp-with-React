@@ -1,6 +1,6 @@
 
 
-const MainHeader = () => {
+const PostHeadlineSmall = () => {
 
     return (
         <h1 className="text-4xl text-gray-800 font-semibold mb-12 mt-4">
@@ -10,4 +10,4 @@ const MainHeader = () => {
     );
 }
 
-export default MainHeader;
+export default PostHeadlineSmall;

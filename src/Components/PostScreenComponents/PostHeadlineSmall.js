@@ -1,6 +1,6 @@
 
 
-const SecondHeader = () => {
+const PostHeadlineSmall = () => {
 
     return (
         <h2 className="text-2xl text-gray-800 font-semibold mb-4 mt-4">
@@ -10,4 +10,4 @@ const SecondHeader = () => {
     );
 }
 
-export default SecondHeader;
+export default PostHeadlineSmall;
