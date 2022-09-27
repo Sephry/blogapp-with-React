@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
-import Pagination from "../Components/Pagination";
-import PostsCard from "../Components/PostsCard"
+import Pagination from "../Components/HomeScreenComponents/Pagination";
+import PostsCard from "../Components/HomeScreenComponents/PostsCard"
 import React from "react";
 import axios from "axios";
 import { useEffect, useState } from "react";
-import NewsletterCard from "../Components/NewsletterCard";
+import NewsletterCard from "../Components/HomeScreenComponents/NewsletterCard";
 
 
 const HomeScreen = (params) => {

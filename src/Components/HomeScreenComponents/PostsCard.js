@@ -1,5 +1,5 @@
 import React from "react"
-import LoadingPage from "./LoadingPage";
+import LoadingPage from "../LoadingPage";
 
 const PostsCard = ({ posts, loading }) => {
 
