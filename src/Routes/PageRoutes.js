@@ -3,9 +3,9 @@ import { Route, Routes } from "react-router-dom";
 import HomeScreen from "../Pages/HomeScreen";
 import PostScreen from "../Pages/PostScreen";
 import ContactScreen from "../Pages/ContactScreen";
-import AboutScreen from "../Pages/AboutScreen";
+import TeamsScreen from "../Pages/TeamsScreen";
 import LoginScreen from "../Pages/LoginScreen";
-import RegisterScreen from "../Pages/RegisterScreen";
+import ArchiveScreen from "../Pages/ArchiveScreen"
 
 function PageRoutes() {
 
@@ -14,9 +14,9 @@ function PageRoutes() {
             <Route path="/" element={<HomeScreen />} />
             <Route path="/post" element={<PostScreen />} />
             <Route path="/contact" element={<ContactScreen />} />
-            <Route path="/about" element={<AboutScreen />} />
+            <Route path="/teams" element={<TeamsScreen />} />
             <Route path="/login" element={<LoginScreen />} />
-            <Route path="/register" element={<RegisterScreen />} />
+            <Route path="/archive" element={<ArchiveScreen />} />
         </Routes>
     );
 

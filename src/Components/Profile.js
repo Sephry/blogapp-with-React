@@ -1,7 +1,6 @@
-export default function AboutScreen(params) {
+export default function Profile() {
 
     return (
-
         <div className=" bg-white  flex flex-wrap items-center justify-center">
             <div className="container max-w-lg bg-white rounded  shadow-lg transform duration-200 easy-in-out m-12">
                 <div className="h-2/4 sm:h-64 overflow-hidden">
@@ -70,7 +69,5 @@ export default function AboutScreen(params) {
                 </div>
             </div>
         </div>
-
-
     );
 }

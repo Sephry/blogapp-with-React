@@ -18,8 +18,9 @@ export default function Navbar() {
         </li>
 
         <li className="px-2 md:px-4">
-          <Link to="/about" className="text-gray-500 font-semibold hover:text-green-600">About</Link>
+          <Link to="/teams" className="text-gray-500 font-semibold hover:text-green-600">Teams</Link>
         </li>
+
 
         <li className="px-2 md:px-4">
           <Link to="/contact" className="text-gray-500 font-semibold hover:text-green-600">
@@ -28,14 +29,16 @@ export default function Navbar() {
         </li>
 
         <li className="px-2 md:px-4">
+
+          <Link to="/archive" className="text-gray-500 font-semibold hover:text-green-600" >
+            Archive
+          </Link>
+        </li>
+
+        <li className="px-2 md:px-4">
           <Link to="/login" className="text-gray-500 font-semibold hover:text-green-600">Login</Link>
         </li>
 
-        <li className="px-2 md:px-4 hidden md:block">
-          <Link to="/register" className="text-gray-500 font-semibold hover:text-green-600">
-            Register
-          </Link>
-        </li>
 
         <li className="px-2 md:px-4 hidden md:block">
           <SearcBar />

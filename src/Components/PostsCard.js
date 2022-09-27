@@ -24,8 +24,7 @@ const PostsCard = ({ posts, loading }) => {
                 Cryptocurrency
               </span>
               <div className="md:mt-0 text-gray-800 font-semibold text-xl mb-2">
-                Advice me cousin an spring of needed. Tell use paid law ever yet
-                new.
+                {post.body}.
               </div>
               <p className="block md:hidden p-2 pl-0 pt-1 text-sm text-gray-600">
                 Meant to learn of vexed if style allow he there. Tiled man stand

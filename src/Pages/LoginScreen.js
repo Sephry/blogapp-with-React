@@ -1,5 +1,3 @@
-import { Link } from "react-router-dom";
-
 export default function LoginScreen(params) {
   return (
     <div className="container mx-auto p-4 bg-white">
@@ -24,12 +22,7 @@ export default function LoginScreen(params) {
           >
             Login
           </button>
-          <div className="flex flex-col items-center mt-5">
-            <p className="mt-1 text-xs font-light text-gray-500">
-              New to Here?
-              <Link to="/register" className="ml-1 font-medium text-blue-400">Sign up now</Link>
-            </p>
-          </div>
+
         </form>
       </div>
     </div>
