@@ -1,8 +1,6 @@
 import TeamsMenu from "../Components/TeamsComponents/TeamsMenu";
 import TeamsProfile from "../Components/TeamsComponents/TeamsProfile";
 
-
-
 export default function TeamsScreen(params) {
 
     return (
