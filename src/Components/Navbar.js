@@ -7,10 +7,6 @@ export default function Navbar() {
 
       <Link to="/" className="px-2 lg:px-0 font-bold capitalize text-2xl"> Sephry Blog </Link>
 
-      <button className="block md:hidden px-2 text-3xl">
-        <i className="bx bx-menu"></i>
-      </button>
-
       <ul className="hidden md:inline-flex items-center">
 
         <li className="px-2 md:px-4">
