@@ -1,4 +1,5 @@
 import { Disclosure } from '@headlessui/react';
+import { useState, useEffect, useMemo } from 'react';
 
 const filters = {
     author: [
@@ -18,12 +19,20 @@ const filters = {
         { value: '2xl', label: '2XL', checked: false },
     ],
     category: [
-        { value: 'all-new-arrivals', label: 'All New Arrivals', checked: false },
-        { value: 'tees', label: 'Tees', checked: false },
+        { value: 'CS', label: 'Computer Science', checked: true },
+        { value: 'AI', label: 'Artificial Intelligence', checked: false },
         { value: 'objects', label: 'Objects', checked: false },
-        { value: 'sweatshirts', label: 'Sweatshirts', checked: false },
-        { value: 'pants-and-shorts', label: 'Pants & Shorts', checked: false },
+        { value: 'ML', label: 'Machine Learning', checked: true },
+        { value: 'JS', label: 'JavaScript', checked: false },
     ],
+}
+
+var count = 0;
+
+for (let i = 0; i < filters.length; i++) {
+    if (filters.checked) {
+        count++;
+    }
 }
 
 export default function ArchiveFilter(params) {
@@ -41,7 +50,7 @@ export default function ArchiveFilter(params) {
                                 <path fill-rule="evenodd" d="M3.792 2.938A49.069 49.069 0 0112 2.25c2.797 0 5.54.236 8.209.688a1.857 1.857 0 011.541 1.836v1.044a3 3 0 01-.879 2.121l-6.182 6.182a1.5 1.5 0 00-.439 1.061v2.927a3 3 0 01-1.658 2.684l-1.757.878A.75.75 0 019.75 21v-5.818a1.5 1.5 0 00-.44-1.06L3.13 7.938a3 3 0 01-.879-2.121V4.774c0-.897.64-1.683 1.542-1.836z" clip-rule="evenodd" />
                             </svg>
 
-                            2 Filters
+                            {count} Filters
                         </Disclosure.Button>
                     </div>
                     <div className="pl-6">
@@ -55,6 +64,8 @@ export default function ArchiveFilter(params) {
             <Disclosure.Panel className="border-t border-gray-200 py-10">
                 <div className="max-w-7xl mx-auto grid grid-cols-2 gap-x-4 px-4 text-sm sm:px-6 md:gap-x-6 lg:px-8">
                     <div className="grid grid-cols-1 gap-y-10 auto-rows-min md:grid-cols-3 md:gap-x-6">
+
+
                         <fieldset>
                             <legend className="block font-medium">Author</legend>
                             <div className="pt-6 space-y-6 sm:pt-4 sm:space-y-4">
@@ -68,13 +79,15 @@ export default function ArchiveFilter(params) {
                                             className="flex-shrink-0 h-4 w-4 border-gray-300 rounded text-indigo-600 focus:ring-indigo-500"
                                             defaultChecked={option.checked}
                                         />
-                                        <label htmlFor={`author-${optionIdx}`} className="ml-3 min-w-0 flex-1 text-gray-600">
+                                        <label htmlFor={`author-${optionIdx}`} className="ml-3 min-w-0 flex-1 text-gray-900">
                                             {option.label}
                                         </label>
                                     </div>
                                 ))}
                             </div>
                         </fieldset>
+
+
                         <fieldset>
                             <legend className="block font-medium">Hashtag</legend>
                             <div className="pt-6 space-y-6 sm:pt-4 sm:space-y-4">
@@ -95,6 +108,8 @@ export default function ArchiveFilter(params) {
                                 ))}
                             </div>
                         </fieldset>
+
+
                         <fieldset>
                             <legend className="block font-medium">Category</legend>
                             <div className="pt-6 space-y-6 sm:pt-4 sm:space-y-4">
@@ -115,6 +130,8 @@ export default function ArchiveFilter(params) {
                                 ))}
                             </div>
                         </fieldset>
+
+
                     </div>
                 </div>
             </Disclosure.Panel>

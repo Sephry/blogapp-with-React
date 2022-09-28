@@ -46,6 +46,8 @@ export default function ArchiveScreen(params) {
                 <ArchiveFilter />
                 <ArchiveSort />
 
+                {/* burada redux kullanılacak archive fiterdan ve sortdan gelen bilgilere göre ArchivePosts düzenlenecek */}
+
             </Disclosure>
 
             <ArchivePosts posts={currentPosts} />
