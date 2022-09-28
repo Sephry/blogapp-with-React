@@ -10,14 +10,6 @@ const filters = {
         { value: 'Ali', label: 'Ali', checked: false },
         { value: 'Veli', label: 'Veli', checked: true },
     ],
-    hashtag: [
-        { value: 'xs', label: 'XS', checked: false },
-        { value: 's', label: 'S', checked: true },
-        { value: 'm', label: 'M', checked: false },
-        { value: 'l', label: 'L', checked: true },
-        { value: 'xl', label: 'XL', checked: false },
-        { value: '2xl', label: '2XL', checked: false },
-    ],
     category: [
         { value: 'CS', label: 'Computer Science', checked: true },
         { value: 'AI', label: 'Artificial Intelligence', checked: false },
@@ -28,27 +20,6 @@ const filters = {
 }
 
 let count = 0;
-
-
-for (let i = 0; i < 6; i++) {
-    if (filters.author[i].checked) {
-        count++;
-    }
-
-}
-
-for (let i = 0; i < 6; i++) {
-    if (filters.hashtag[i].checked) {
-        count++;
-    }
-
-}
-for (let i = 0; i < 5; i++) {
-    if (filters.category[i].checked) {
-        count++;
-    }
-
-}
 
 export default class ArchiveFilter extends Component {
 
@@ -104,29 +75,6 @@ export default class ArchiveFilter extends Component {
                                     ))}
                                 </div>
                             </fieldset>
-
-
-                            <fieldset>
-                                <legend className="block font-medium">Hashtag</legend>
-                                <div className="pt-6 space-y-6 sm:pt-4 sm:space-y-4">
-                                    {filters.hashtag.map((option, optionIdx) => (
-                                        <div key={option.value} className="flex items-center text-base sm:text-sm">
-                                            <input
-                                                id={`hashtag-${optionIdx}`}
-                                                name="hashtag[]"
-                                                defaultValue={option.value}
-                                                type="checkbox"
-                                                className="flex-shrink-0 h-4 w-4 border-gray-300 rounded text-indigo-600 focus:ring-indigo-500"
-                                                defaultChecked={option.checked}
-                                            />
-                                            <label htmlFor={`hashtag-${optionIdx}`} className="ml-3 min-w-0 flex-1 text-gray-600">
-                                                {option.label}
-                                            </label>
-                                        </div>
-                                    ))}
-                                </div>
-                            </fieldset>
-
 
                             <fieldset>
                                 <legend className="block font-medium">Category</legend>
