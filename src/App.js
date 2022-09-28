@@ -1,21 +1,24 @@
-import React from "react";
+import React, { Component } from "react";
 
 import Footer from "./Components/Footer";
 import Navbar from "./Components/NavBar";
 
 import PageRoutes from "./Routes/PageRoutes";
 
-const App = () => {
+class App extends Component {
 
-  return (
-    <div className="max-w-screen-xl mx-auto">
-      <Navbar />
+  render() {
+    return (
+      <div className="max-w-screen-xl mx-auto">
+        <Navbar />
 
-      <PageRoutes />
+        <PageRoutes />
 
-      <Footer />
-    </div>
-  );
+        <Footer />
+      </div>
+    );
+  }
+
 }
 
 export default App;
