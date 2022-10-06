@@ -6,6 +6,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import NewsletterCard from "../Components/HomeScreenComponents/NewsletterCard";
 import PopularNews from "../Components/HomeScreenComponents/PopularNews";
+import ChairMansLetter from "../Components/HomeScreenComponents/ChairMansLetter";
 
 
 const HomeScreen = (params) => {
@@ -37,6 +38,8 @@ const HomeScreen = (params) => {
 
   return (
     <main className="mt-12">
+
+      <ChairMansLetter />
 
       <div className="flex flex-wrap md:flex-no-wrap space-x-0 md:space-x-6">
         <div className="mb-4 lg:mb-0 p-4 lg:p-0 w-full md:w-4/7 relative rounded block">
