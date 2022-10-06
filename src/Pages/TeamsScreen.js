@@ -1,3 +1,4 @@
+import FullWidthTabs from "../Components/TeamsComponents/TeamsMenu";
 import TeamsMenu from "../Components/TeamsComponents/TeamsMenu";
 import TeamsProfile from "../Components/TeamsComponents/TeamsProfile";
 
@@ -14,17 +15,9 @@ export default function TeamsScreen(params) {
                 </p>
 
                 <div class="flex items-center justify-center">
-                    <TeamsMenu />
+                    <FullWidthTabs />
                 </div>
 
-                <div class="grid grid-cols-1 gap-8 mt-8 xl:mt-16 md:grid-cols-2 xl:grid-cols-4">
-                    <TeamsProfile />
-                    <TeamsProfile />
-                    <TeamsProfile />
-                    <TeamsProfile />
-                    <TeamsProfile />
-                    <TeamsProfile />
-                </div>
 
 
             </div>
