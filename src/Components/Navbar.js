@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import SearcBar from "./SearchBar";
 
 export default function Navbar() {
   return (
@@ -36,9 +35,7 @@ export default function Navbar() {
         </li>
 
 
-        <li className="px-2 md:px-4 hidden md:block">
-          <SearcBar />
-        </li>
+       
 
       </ul>
     </header>
