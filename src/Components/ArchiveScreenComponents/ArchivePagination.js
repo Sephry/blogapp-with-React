@@ -18,11 +18,11 @@ export default function ArchivePagination({
       <div className='py-2'>
         <div>
   
-          <p className='text-base text-gray-700'>
+          <p className='text-base text-gray-700 ml-96'>
             Showing
             <span className='font-medium'>
               {" "}
-              {currentPage * postsPerPage - 8}{" "}
+              {currentPage * postsPerPage - 10}{" "}
             </span>
             to
             <span className='font-medium'> {currentPage * postsPerPage} </span>
@@ -33,7 +33,7 @@ export default function ArchivePagination({
   
         </div>
         <nav className=''>
-          <ul className='isolate inline-flex -space-x-px rounded-md shadow-sm ml-56'>
+          <ul className='isolate inline-flex -space-x-px rounded-md shadow-sm ml-96'>
             <li>
               {pageNumbers.map((number) => (
                 <a
