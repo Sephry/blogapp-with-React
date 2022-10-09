@@ -16,9 +16,7 @@ export default function Home() {
     }, [startDate])
 
     return (
-        <div className="flex">
 
-            <ChairMansLetter />
 
             <div className="flex justify-end   space-x-4">
                 <span className="font-medium text-gray-900 p-1">Event Dates:</span>
@@ -47,6 +45,5 @@ export default function Home() {
                     />
                 </div>
             </div>
-        </div>
     )
 }

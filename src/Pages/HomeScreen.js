@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import NewsletterCard from "../Components/HomeScreenComponents/NewsletterCard";
 import PopularNews from "../Components/HomeScreenComponents/PopularNews";
 import HomeDatePicker from "../Components/HomeScreenComponents/HomeDatePicker";
+import ChairMansLetter from "../Components/HomeScreenComponents/ChairMansLetter";
 
 const HomeScreen = (params) => {
 
@@ -37,8 +38,13 @@ const HomeScreen = (params) => {
   return (
     <main className="mt-12">
       
-      <HomeDatePicker />
       
+      <div className="flex" >
+        
+        <ChairMansLetter />
+        <HomeDatePicker />
+        
+      </div>
 
       <div className="" >
         <PostsCard posts={currentPosts} />
