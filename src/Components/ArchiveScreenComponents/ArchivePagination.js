@@ -1,5 +1,6 @@
 import React from "react";
 
+
 export default function ArchivePagination({
     postsPerPage,
     totalPosts,
@@ -34,6 +35,7 @@ export default function ArchivePagination({
         </div>
         <nav className=''>
           <ul className='isolate inline-flex -space-x-px rounded-md shadow-sm ml-96'>
+            
             <li>
               {pageNumbers.map((number) => (
                 <a
@@ -51,6 +53,7 @@ export default function ArchivePagination({
                 </a>
               ))}
             </li>
+            
           </ul>
         </nav>
       </div>

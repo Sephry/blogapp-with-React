@@ -1,5 +1,5 @@
 import { Disclosure } from '@headlessui/react';
-import { useState, useEffect, useMemo, Component } from 'react';
+import { Component } from 'react';
 
 const filters = {
     author: [
