@@ -60,7 +60,8 @@ export default function ArchiveScreen(params) {
 
             </Disclosure>
 
-            <ArchivePosts posts={filteredPost} loading={loading} />
+            <ArchivePosts posts={filteredPost=== " " ? currentPosts : filteredPost  } loading={loading} />
+
             <ArchivePagination
                 postsPerPage={postsPerPage}
                 totalPosts={posts.length}
