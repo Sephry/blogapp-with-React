@@ -43,6 +43,7 @@ const ArchiveFilter = ({ searchChange }) => {
                         <button type="button" className="text-gray-500">
                             Clear all
                         </button>
+                        
                         <ArchiveSort />
                         <SearcBar searchChange={searchChange} />
 

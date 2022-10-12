@@ -11,12 +11,12 @@ const ArchivePosts = ({ posts, loading }) => {
         <ul>
             <li className="grid grid-cols-2">
                 {posts.map((post) => (
-                    <div key={post.id} className="border border-gray-300 hover:border-gray-500 hover:bg-gray-50 m-1 p-3  rounded-xl flex flex-col md:flex-row mb-10">
+                    <div key={post.id} className="border border-gray-300 hover:border-gray-500 hover:bg-gray-100 m-1 p-3  rounded-xl flex flex-col md:flex-row mb-10">
                         <img
                             src="https://images.unsplash.com/photo-1531297484001-80022131f5a1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60"
                             className="block md:hidden lg:block rounded-md h-64 md:h-32 m-4 md:m-0"
                         />
-                        <div className="bg-white rounded px-4">
+                        <div className=" rounded px-4">
                             <span className="text-green-700 text-sm hidden md:block">
                                 {post.title}
                             </span>
