@@ -1,6 +1,4 @@
 export default function SearcBar({ searchChange }) {
-
-
     return (
         <div className="flex justify-center">
             <div className=" xl:w-75">
