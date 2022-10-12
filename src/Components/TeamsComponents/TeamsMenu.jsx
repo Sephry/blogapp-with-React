@@ -13,7 +13,6 @@ function TabPanel(props) {
   return (
     <div
       role="tabpanel"
-
     >
       {value === index && (
         <Box className='grid grid-rows-3 gap-x-8 mt-12 '>

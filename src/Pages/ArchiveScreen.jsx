@@ -4,7 +4,6 @@ import ArchivePosts from '../Components/ArchiveScreenComponents/ArchivePosts';
 import ArchivePagination from "../Components/ArchiveScreenComponents/ArchivePagination";
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import SearcBar from '../Components/ArchiveScreenComponents/SearchBar';
 
 
 export default function ArchiveScreen(params) {
