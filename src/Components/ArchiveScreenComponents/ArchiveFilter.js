@@ -105,10 +105,6 @@ export default class ArchiveFilter extends Component {
                         </div>
                     </div>
                 </Disclosure.Panel>
-
-
-
-
             </div>
         );
     }
