@@ -16,6 +16,17 @@ export default function ArchiveScreen(params) {
     const [currentPage, setCurrentPage] = useState(1);
     const [postsPerPage] = useState(10)
 
+    const searchChange = (e) => {
+        const searchValue = e.target.value.toLowerCase();
+        setSearch(searchValue);
+      };
+    
+      const filteredPost = posts.filter((post) => {
+        return post.title.toLowerCase().includes(search);
+      });
+
+      console.log(filteredPost);
+      
     useEffect(() => {
         const fetchPosts = async () => {
             setLoading(true);
@@ -30,21 +41,12 @@ export default function ArchiveScreen(params) {
     // Get current posts
     const indexOfLastPost = currentPage * postsPerPage;
     const indexOfFirstPost = indexOfLastPost - postsPerPage;
-    const currentPosts = posts.slice(indexOfFirstPost, indexOfLastPost);
+    const currentPosts = filteredPost.slice(indexOfFirstPost, indexOfLastPost);
 
     // Change page
     const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
-    const searchChange = (e) => {
-        const searchValue = e.target.value.toLowerCase();
-        setSearch(searchValue);
-      };
-    
-      const filteredPost = posts.filter((post) => {
-        return post.title.toLowerCase().includes(search);
-      });
-
-      console.log(filteredPost);
+  
 
     return (
         <div className="bg-white mt-10 ">
@@ -60,7 +62,7 @@ export default function ArchiveScreen(params) {
 
             </Disclosure>
 
-            <ArchivePosts posts={filteredPost=== " " ? currentPosts : filteredPost  } loading={loading} />
+            <ArchivePosts posts={currentPosts } loading={loading} />
 
             <ArchivePagination
                 postsPerPage={postsPerPage}
