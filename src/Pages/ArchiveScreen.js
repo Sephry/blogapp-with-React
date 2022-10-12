@@ -19,14 +19,14 @@ export default function ArchiveScreen(params) {
     const searchChange = (e) => {
         const searchValue = e.target.value.toLowerCase();
         setSearch(searchValue);
-      };
-    
-      const filteredPost = posts.filter((post) => {
-        return post.title.toLowerCase().includes(search);
-      });
+    };
 
-      console.log(filteredPost);
-      
+    const filteredPost = posts.filter((post) => {
+        return post.title.toLowerCase().includes(search);
+    });
+
+    console.log(filteredPost);
+
     useEffect(() => {
         const fetchPosts = async () => {
             setLoading(true);
@@ -46,7 +46,7 @@ export default function ArchiveScreen(params) {
     // Change page
     const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
-  
+
 
     return (
         <div className="bg-white mt-10 ">
@@ -56,13 +56,12 @@ export default function ArchiveScreen(params) {
                 aria-labelledby="filter-heading"
                 className="relative z-10 border-t border-b border-gray-200 flex  items-center mb-10"
             >
-                <ArchiveFilter />
-                <SearcBar searchChange={searchChange} />
-                
+                <ArchiveFilter searchChange={searchChange} />
+
 
             </Disclosure>
 
-            <ArchivePosts posts={currentPosts } loading={loading} />
+            <ArchivePosts posts={currentPosts} loading={loading} />
 
             <ArchivePagination
                 postsPerPage={postsPerPage}
