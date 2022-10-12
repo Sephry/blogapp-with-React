@@ -1,7 +1,6 @@
 import { Disclosure } from '@headlessui/react';
 import ArchiveFilter from '../Components/ArchiveScreenComponents/ArchiveFilter';
 import ArchivePosts from '../Components/ArchiveScreenComponents/ArchivePosts';
-import ArchiveSort from "../Components/ArchiveScreenComponents/ArchiveSort";
 import ArchivePagination from "../Components/ArchiveScreenComponents/ArchivePagination";
 import React, { useState, useEffect } from "react";
 import axios from "axios";
@@ -10,6 +9,7 @@ import SearcBar from '../Components/ArchiveScreenComponents/SearchBar';
 
 export default function ArchiveScreen(params) {
 
+    const [search, setSearch] = useState("");
 
     const [posts, setPosts] = useState([]);
     const [loading, setLoading] = useState(false);
@@ -35,6 +35,16 @@ export default function ArchiveScreen(params) {
     // Change page
     const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
+    const searchChange = (e) => {
+        const searchValue = e.target.value.toLowerCase();
+        setSearch(searchValue);
+      };
+    
+      const filteredPost = posts.filter((post) => {
+        return post.title.toLowerCase().includes(search);
+      });
+
+      console.log(filteredPost);
 
     return (
         <div className="bg-white mt-10 ">
@@ -45,11 +55,12 @@ export default function ArchiveScreen(params) {
                 className="relative z-10 border-t border-b border-gray-200 flex  items-center mb-10"
             >
                 <ArchiveFilter />
+                <SearcBar searchChange={searchChange} />
                 
 
             </Disclosure>
 
-            <ArchivePosts posts={currentPosts} />
+            <ArchivePosts posts={filteredPost} loading={loading} />
             <ArchivePagination
                 postsPerPage={postsPerPage}
                 totalPosts={posts.length}

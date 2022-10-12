@@ -49,7 +49,8 @@ export default class ArchiveFilter extends Component {
                                 Clear all
                             </button>
                             <ArchiveSort />
-                            <SearcBar />
+                            {//<SearcBar />
+                            }
                         </div>
                     </div>
                 </div>
