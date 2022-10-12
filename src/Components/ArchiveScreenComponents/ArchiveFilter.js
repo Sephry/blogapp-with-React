@@ -1,5 +1,7 @@
 import { Disclosure } from '@headlessui/react';
 import { Component } from 'react';
+import ArchiveSort from './ArchiveSort';
+import SearcBar from './SearchBar';
 
 const filters = {
     author: [
@@ -42,10 +44,12 @@ export default class ArchiveFilter extends Component {
                                 2 Filters
                             </Disclosure.Button>
                         </div>
-                        <div className="pl-6">
+                        <div className="pl-6 flex justify-center">
                             <button type="button" className="text-gray-500">
                                 Clear all
                             </button>
+                            <ArchiveSort />
+                            <SearcBar />
                         </div>
                     </div>
                 </div>

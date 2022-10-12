@@ -47,7 +47,7 @@ const HomeScreen = (params) => {
       </div>
 
       <div className="" >
-        <PostsCard posts={currentPosts} />
+        <PostsCard posts={currentPosts} loading={loading} />
         <Pagination
           postsPerPage={postsPerPage}
           totalPosts={posts.length}

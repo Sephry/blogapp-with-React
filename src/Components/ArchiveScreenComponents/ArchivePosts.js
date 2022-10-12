@@ -2,6 +2,7 @@ import React from "react";
 import LoadingPage from "../LoadingPage"
 
 const ArchivePosts = ({ posts, loading }) => {
+    
     if (loading) {
         return <LoadingPage />;
     }
@@ -17,7 +18,7 @@ const ArchivePosts = ({ posts, loading }) => {
                         />
                         <div className="bg-white rounded px-4">
                             <span className="text-green-700 text-sm hidden md:block">
-                                Bitcoin
+                                {post.title}
                             </span>
                             <div className="md:mt-0 text-gray-800 font-semibold text-xl mb-2">
                                 {post.body}

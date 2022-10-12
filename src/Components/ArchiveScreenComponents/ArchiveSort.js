@@ -12,10 +12,10 @@ function classNames(...classes) {
     return classes.filter(Boolean).join(' ')
 }
 
-function ArchiveSort(params) {
+function ArchiveSort() {
     return (
-        <div className="col-start-1 row-start-1 py-4">
-            <div className="flex justify-end max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-center pt-2">
+            <div className=" max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <Menu as="div" className="relative inline-block">
                     <div className="flex">
                         <Menu.Button className="group inline-flex justify-center text-sm font-medium text-gray-700 hover:text-gray-900">

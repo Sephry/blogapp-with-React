@@ -42,11 +42,10 @@ export default function ArchiveScreen(params) {
             <Disclosure
                 as="section"
                 aria-labelledby="filter-heading"
-                className="relative z-10 border-t border-b border-gray-200 flex flex-row items-center mb-10"
+                className="relative z-10 border-t border-b border-gray-200 flex  items-center mb-10"
             >
                 <ArchiveFilter />
-                <ArchiveSort />
-                <SearcBar  />
+                
 
             </Disclosure>
 
