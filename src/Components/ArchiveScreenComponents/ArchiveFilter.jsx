@@ -1,4 +1,5 @@
 import { Disclosure } from '@headlessui/react';
+import { useState } from 'react';
 import ArchiveSort from './ArchiveSort';
 import SearcBar from './SearchBar';
 
@@ -23,6 +24,10 @@ const filters = {
 
 const ArchiveFilter = ({ searchChange }) => {
 
+
+
+   
+
     return (
         <div className='' >
             <h2 id="filter-heading" className="sr-only">
@@ -40,10 +45,10 @@ const ArchiveFilter = ({ searchChange }) => {
                         </Disclosure.Button>
                     </div>
                     <div className="pl-6 flex justify-center">
-                        <button type="button" className="text-gray-500">
+                        <button  type="button" className="text-gray-500">
                             Clear all
                         </button>
-                        
+
                         <ArchiveSort />
                         <SearcBar searchChange={searchChange} />
 
