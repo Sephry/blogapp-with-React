@@ -1,5 +1,4 @@
 import { Disclosure } from '@headlessui/react';
-import { useState } from 'react';
 import ArchiveSort from './ArchiveSort';
 import SearcBar from './SearchBar';
 
