@@ -21,7 +21,7 @@ export default function EventCard({ dateRange }) {
 
   return (
     <div className='mx-40 mt-10'>
-      <Button aria-describedby={id} variant="contained" onClick={handleClick}>
+      <Button  aria-describedby={id} variant="contained" size='large' color='success' onClick={handleClick}>
         View Events
       </Button>
       <Popover

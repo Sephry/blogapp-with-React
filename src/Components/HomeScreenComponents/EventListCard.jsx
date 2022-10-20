@@ -18,7 +18,9 @@ export default function EventListCard() {
       </CardContent>
       <CardActions>
         <Button size="small">Share</Button>
-        <Button size="small">Learn More</Button>
+        <Button color="success" size="small">
+          Learn More
+        </Button>
       </CardActions>
     </Card>
   );
