@@ -1,11 +1,48 @@
-export default function EventCard() {
+import Popover from '@mui/material/Popover';
+import Typography from '@mui/material/Typography';
+import Button from '@mui/material/Button';
+import React, { useState } from 'react';
+import EventListCard from './EventListCard';
 
-    return (
+export default function EventCard({ dateRange }) {
+  const [anchorEl, setAnchorEl] = useState(null)
 
-        <a href="#" class="block p-6 mt-2 max-w-sm bg-white rounded-lg border border-gray-200 shadow-md hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
-            <h5 class="mb-2 text-base font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy technology acquisitions 2021</h5>
-            <p class="font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
-        </a>
+  const handleClick = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
 
-    );
+  const handleclose = () => {
+    setAnchorEl(null);
+  };
+
+  const open = Boolean(anchorEl);
+
+  const id = open ? "simple-popover" : undefined;
+
+  return (
+    <div className='mx-40 mt-10'>
+      <Button aria-describedby={id} variant="contained" onClick={handleClick}>
+        View Events
+      </Button>
+      <Popover
+        id={id}
+        open={open}
+        anchorEl={anchorEl}
+        onClose={handleclose}
+        anchorOrigin={{
+          vertical: "bottom",
+          horizontal: "center",
+        }}
+      >
+        
+        <EventListCard />
+        <EventListCard />
+        <EventListCard />
+        <EventListCard />
+        <EventListCard />
+        <EventListCard />
+
+      </Popover>
+    </div>
+  );
 }

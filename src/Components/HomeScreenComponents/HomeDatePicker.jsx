@@ -1,6 +1,6 @@
-import DatePicker from 'react-datepicker'
-import { useEffect, useState } from 'react'
-import EventCard from './EventCard'
+import DatePicker from 'react-datepicker';
+import { useEffect, useState } from 'react';
+import EventCard from './EventCard';
 
 export default function Home() {
 
@@ -17,7 +17,7 @@ export default function Home() {
 
     return (
         <div >
-             <div className="flex justify-end   space-x-4">
+             <div className="flex justify-end space-x-4">
                 <span className="font-medium text-gray-900 p-1">Event Dates:</span>
                 <div className="relative w-40">
                     <DatePicker
@@ -44,7 +44,7 @@ export default function Home() {
                     />
                 </div>
             </div>
-            <EventCard />
+            <EventCard dateRange={endDate} />
         </div>
 
            
