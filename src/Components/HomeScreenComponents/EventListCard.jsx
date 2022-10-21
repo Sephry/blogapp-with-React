@@ -5,6 +5,9 @@ import { Button, CardActions } from "@mui/material";
 import React from "react";
 
 export default function EventListCard() {
+
+  // map yapılcak
+  
   return (
     <Card sx={{ maxWidth: 345 }}>
       <CardContent>
