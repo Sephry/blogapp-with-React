@@ -29,6 +29,7 @@ export default function Home() {
                         nextMonthButtonLabel=">"
                         previousMonthButtonLabel="<"
                         popperClassName="react-datepicker-left"
+                        dateFormat="dd/MM/yyyy"
                     />
                 </div>
                 <div className="relative w-40">
@@ -41,6 +42,7 @@ export default function Home() {
                         nextMonthButtonLabel=">"
                         previousMonthButtonLabel="<"
                         popperClassName="react-datepicker-right"
+                        dateFormat="dd/MM/yyyy"
                     />
                 </div>
             </div>
