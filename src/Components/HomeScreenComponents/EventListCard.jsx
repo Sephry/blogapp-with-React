@@ -9,7 +9,7 @@ export default function EventListCard() {
   // map yapılcak
   
   return (
-    <Card sx={{ maxWidth: 345 }}>
+    <Card sx={{ maxWidth: 400 }}>
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
           Lizard

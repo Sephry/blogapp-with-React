@@ -5,7 +5,6 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import NewsletterCard from "../Components/HomeScreenComponents/NewsletterCard";
 import PopularNews from "../Components/HomeScreenComponents/PopularNews";
-import HomeDatePicker from "../Components/HomeScreenComponents/HomeDatePicker";
 import ChairMansLetter from "../Components/HomeScreenComponents/ChairMansLetter";
 
 const HomeScreen = (params) => {
@@ -41,9 +40,7 @@ const HomeScreen = (params) => {
       
       <div className="flex" >
         
-        <ChairMansLetter />
-        <HomeDatePicker />
-    
+        <ChairMansLetter />    
         
       </div>
 

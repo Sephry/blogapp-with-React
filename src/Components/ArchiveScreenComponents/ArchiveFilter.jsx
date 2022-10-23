@@ -22,11 +22,6 @@ const filters = {
 
 
 const ArchiveFilter = ({ searchChange }) => {
-
-
-
-   
-
     return (
         <div className='' >
             <h2 id="filter-heading" className="sr-only">

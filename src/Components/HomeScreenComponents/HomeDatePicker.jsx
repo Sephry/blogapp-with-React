@@ -1,8 +1,7 @@
 import DatePicker from 'react-datepicker';
 import { useEffect, useState } from 'react';
-import EventCard from './EventCard';
 
-export default function Home() {
+export default function HomeDatePicker() {
 
     const [startDate, setStartDate] = useState(new Date())
     const [endDate, setEndDate] = useState(new Date().setMonth(startDate.getMonth() + 1))
@@ -16,10 +15,10 @@ export default function Home() {
     }, [startDate])
 
     return (
-        <div >
-             <div className="flex justify-end space-x-4">
-                <span className="font-medium text-gray-900 p-1">Event Dates:</span>
-                <div className="relative w-40">
+        <div className='m-4' >
+             <div className="flex space-x-4">
+                <span className="font-normal text-gray-900 p-1">Event Dates:</span>
+                <div className="relative w-32">
                     <DatePicker
                         selected={startDate}
                         onChange={(date) => setStartDate(date)}
@@ -32,7 +31,7 @@ export default function Home() {
                         dateFormat="dd/MM/yyyy"
                     />
                 </div>
-                <div className="relative w-40">
+                <div className="relative w-32">
                     <DatePicker
                         selected={endDate}
                         onChange={(date) => setEndDate(date)}
@@ -46,9 +45,8 @@ export default function Home() {
                     />
                 </div>
             </div>
-            <EventCard dateRange={endDate} />
         </div>
 
            
-    )
+    );
 }
