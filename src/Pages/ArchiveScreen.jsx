@@ -53,7 +53,7 @@ export default function ArchiveScreen() {
             <Disclosure
                 as="section"
                 aria-labelledby="filter-heading"
-                className="relative z-10 border-t border-b border-gray-200 flex  items-center mb-10"
+                className="relative z-10 border-t border-b border-gray-200 flex  items-center"
             >
                 <ArchiveFilter searchChange={searchChange} />
 

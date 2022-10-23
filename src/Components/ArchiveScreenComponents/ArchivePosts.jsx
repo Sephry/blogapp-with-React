@@ -1,10 +1,27 @@
-import React from "react";
+import React, { useState } from "react";
 import LoadingPage from "../LoadingPage";
+import Popover from "@mui/material/Popover";
+import Button from "@mui/material/Button";
+import { IconButton } from "@mui/material";
+import ViewColumnRoundedIcon from "@mui/icons-material/ViewColumnRounded";
 
-const ArchivePosts = ({ posts, loading, colTable }) => {
+const ArchivePosts = ({ posts, loading }) => {
+  const [anchorEl, setAnchorEl] = useState(null);
 
-  const twoCols = "grid grid-cols-2";
-  const oneCols = "grid grid-cols-1";
+  const [column, setColumn] = useState(true);
+
+  const handleClick = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
+
+  const open = Boolean(anchorEl);
+  const id = open ? "simple-popover" : undefined;
+
+  const cols = ["grid grid-cols-2", "grid grid-cols-1"];
 
   if (loading) {
     return <LoadingPage />;
@@ -12,8 +29,46 @@ const ArchivePosts = ({ posts, loading, colTable }) => {
 
   return (
     <ul className="">
-        
-      <li className={colTable ? twoCols : oneCols}>
+      <li className="m-4">
+        <IconButton
+          aria-describedby={id}
+          variant="contained"
+          onClick={handleClick}
+        >
+          <ViewColumnRoundedIcon />
+        </IconButton>
+        <Popover
+          id={id}
+          open={open}
+          anchorEl={anchorEl}
+          onClose={handleClose}
+          anchorOrigin={{
+            vertical: "bottom",
+            horizontal: "left",
+          }}
+        >
+          <Button
+            color=""
+            variant="plain"
+            onClick={() => {
+              setColumn(false);
+            }}
+          >
+            One Column
+          </Button>
+          <Button
+            color=""
+            variant="plain"
+            onClick={() => {
+              setColumn(true);
+            }}
+          >
+            Two Column
+          </Button>
+        </Popover>
+      </li>
+
+      <li className={column ? cols[0] : cols[1]}>
         {posts.map((post) => (
           <div
             key={post.id}
