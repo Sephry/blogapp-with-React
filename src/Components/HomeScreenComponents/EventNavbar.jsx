@@ -1,10 +1,11 @@
-import { Button } from "@mui/material";
+import { Button, Drawer, rgbToHex } from "@mui/material";
 import Popover from "@mui/material/Popover";
 import React, { useState } from "react";
 import EventListCard from "./EventListCard";
 import HomeDatePicker from "./HomeDatePicker";
 
 function EventNavbar({ dateRange }) {
+
   const [anchorEl, setAnchorEl] = useState(null);
 
   const handleClick = (event) => {
@@ -22,14 +23,15 @@ function EventNavbar({ dateRange }) {
   return (
     <li className="px-2 md:px-4">
       <Button
-        variant="text"
+        variant="plain"
+        color="neutral"
         aria-describedby={id}
         className="text-gray-500 font-semibold hover:text-green-600"
         onClick={handleClick}
       >
         View Events
       </Button>
-      <Popover
+     { <Popover
         id={id}
         open={open}
         anchorEl={anchorEl}
@@ -51,7 +53,7 @@ function EventNavbar({ dateRange }) {
         <EventListCard />
         <EventListCard />
         <EventListCard />
-      </Popover>
+      </Popover>}
     </li>
   );
 }

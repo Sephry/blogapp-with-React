@@ -6,7 +6,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 
 
-export default function ArchiveScreen(params) {
+export default function ArchiveScreen() {
 
     const [search, setSearch] = useState("");
 
@@ -60,7 +60,7 @@ export default function ArchiveScreen(params) {
 
             </Disclosure>
 
-            <ArchivePosts posts={currentPosts} loading={loading} />
+            <ArchivePosts posts={currentPosts} loading={loading} colTable={true} />
 
             <ArchivePagination
                 postsPerPage={postsPerPage}
