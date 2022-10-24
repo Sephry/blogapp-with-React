@@ -6,16 +6,16 @@ const filters = {
     author: [
         { value: 'Ismail', label: 'İsmail', checked: false },
         { value: 'Yekta', label: 'Yekta', checked: false },
-        { value: 'Ahmet', label: 'Ahmet', checked: true },
+        { value: 'Ahmet', label: 'Ahmet', checked: false },
         { value: 'Mehmet', label: 'Mehmet', checked: false },
         { value: 'Ali', label: 'Ali', checked: false },
-        { value: 'Veli', label: 'Veli', checked: true },
+        { value: 'Veli', label: 'Veli', checked: false },
     ],
     category: [
-        { value: 'CS', label: 'Computer Science', checked: true },
+        { value: 'CS', label: 'Computer Science', checked: false },
         { value: 'AI', label: 'Artificial Intelligence', checked: false },
         { value: 'objects', label: 'Objects', checked: false },
-        { value: 'ML', label: 'Machine Learning', checked: true },
+        { value: 'ML', label: 'Machine Learning', checked: false },
         { value: 'JS', label: 'JavaScript', checked: false },
     ],
 }
