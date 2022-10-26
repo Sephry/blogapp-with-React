@@ -1,4 +1,4 @@
-export default function SearcBar({ searchChange }) {
+export default function SearchBar({ searchChange }) {
     return (
         <div className="flex justify-center">
             <div className=" xl:w-75">
