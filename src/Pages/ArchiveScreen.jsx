@@ -24,10 +24,6 @@ const filters = {
   ],
 };
 
-function Highlight({ text }) {
-    return <>{text}</>
-}
-
 export default function ArchiveScreen() {
   const [posts, setPosts] = useState([]);
   const [loading, setLoading] = useState(false);
