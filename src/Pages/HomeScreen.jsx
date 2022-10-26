@@ -7,7 +7,7 @@ import NewsletterCard from "../Components/HomeScreenComponents/NewsletterCard";
 import PopularNews from "../Components/HomeScreenComponents/PopularNews";
 import ChairMansLetter from "../Components/HomeScreenComponents/ChairMansLetter";
 
-const HomeScreen = (params) => {
+const HomeScreen = () => {
 
   const [posts, setPosts] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -38,7 +38,7 @@ const HomeScreen = (params) => {
     <main className="mt-12">
       
       
-      <div className="flex" >
+      <div className="" >
         
         <ChairMansLetter />    
         

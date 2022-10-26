@@ -1,7 +1,7 @@
 export default function ChairMansLetter() {
 
     return (
-        <div class="py-8 ">
+        <div class="py-8">
             <section class="bg-white ">
                 <div class=" px-4 mx-auto text-center">
                     <figure class="max-w-screen-md mx-auto">
