@@ -2,7 +2,6 @@ import { Disclosure } from "@headlessui/react";
 import ArchiveFilter from "../Components/ArchiveScreenComponents/ArchiveFilter";
 import ArchivePosts from "../Components/ArchiveScreenComponents/ArchivePosts";
 import ArchivePagination from "../Components/ArchiveScreenComponents/ArchivePagination";
-import SearchBar from "../Components/ArchiveScreenComponents/SearchBar";
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
