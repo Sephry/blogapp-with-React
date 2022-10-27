@@ -8,7 +8,7 @@ export default function ArchivePagination({
 }) {
   const pageNumbers = [];
 
-  for (let i = 1; i <= 10; i++) {
+  for (let i = 1; i <= ((totalPosts /10) + 1); i++) {
     pageNumbers.push(i);
   }
 

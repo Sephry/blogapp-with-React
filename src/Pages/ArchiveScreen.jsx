@@ -25,12 +25,16 @@ const filters = {
 };
 
 export default function ArchiveScreen() {
+
   const [posts, setPosts] = useState([]);
   const [loading, setLoading] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
   const [postsPerPage] = useState(10);
 
   const [search, setSearch] = useState("");
+  const [filterChecked, setfilterChecked] = useState(false);
+  const [filterValue, setfilterValue] = useState();
+
 
   const searchChange = (e) => {
     const searchValue = e.target.value.toLowerCase();
@@ -41,6 +45,15 @@ export default function ArchiveScreen() {
     const searchText = post.body.toLowerCase().includes(search);
     return searchText;
   });
+
+  const filterChange = (e) => {
+    const filterChecked = e.target.checked;
+    const filterValue = e.target.value;
+    setfilterValue(filterValue);
+    console.log(filterChecked);
+    setfilterChecked(filterChecked);    
+    console.log(filterValue);
+  }
 
   useEffect(() => {
     const fetchPosts = async () => {
@@ -57,7 +70,6 @@ export default function ArchiveScreen() {
   const indexOfLastPost = currentPage * postsPerPage;
   const indexOfFirstPost = indexOfLastPost - postsPerPage;
   const currentPosts = filteredPost.slice(indexOfFirstPost, indexOfLastPost);
-
   // Change page
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
@@ -69,15 +81,14 @@ export default function ArchiveScreen() {
         aria-labelledby="filter-heading"
         className="relative z-10 border-t border-b border-gray-200 flex  items-center"
       >
-        <ArchiveFilter filters={filters} />
-        <SearchBar searchChange={searchChange} />
+        <ArchiveFilter filters={filters} filterChange={filterChange} searchChange={searchChange} />
       </Disclosure>
 
       <ArchivePosts posts={currentPosts} loading={loading} colTable={true} highlight={search} />
 
       <ArchivePagination
         postsPerPage={postsPerPage}
-        totalPosts={posts.length}
+        totalPosts={filteredPost.length}
         paginate={paginate}
         currentPage={currentPage}
       />

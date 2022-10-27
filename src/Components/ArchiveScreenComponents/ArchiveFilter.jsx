@@ -1,10 +1,10 @@
 import { Disclosure } from "@headlessui/react";
 import { useState } from "react";
 import ArchiveSort from "./ArchiveSort";
+import SearchBar from "./SearchBar";
 
 
-const ArchiveFilter = ({ filters , filterChange }) => {
-
+const ArchiveFilter = ({ filters , filterChange , searchChange }) => {
 
   return (
     <div className="">
@@ -33,6 +33,7 @@ const ArchiveFilter = ({ filters , filterChange }) => {
           </div>
           <div className="pl-3 flex justify-center">
             <ArchiveSort />
+            <SearchBar searchChange={searchChange} />
           </div>
         </div>
       </div>
