@@ -1,11 +1,16 @@
 import { Disclosure } from "@headlessui/react";
 import { useState } from "react";
+import CheckBox from "../../Common/CheckBox";
 import ArchiveSort from "./ArchiveSort";
 import SearchBar from "./SearchBar";
 
-
-const ArchiveFilter = ({ filters , filterChange , searchChange }) => {
-
+const ArchiveFilter = ({
+  searchChange,
+  cuisinesAuthor,
+  cuisinesCategory,
+  changeCheckedAuthor,
+  changeCheckedCategory,
+}) => {
   return (
     <div className="">
       <h2 id="filter-heading" className="sr-only">
@@ -44,27 +49,12 @@ const ArchiveFilter = ({ filters , filterChange , searchChange }) => {
             <fieldset>
               <legend className="block font-medium">Author</legend>
               <div className="pt-6 space-y-6 sm:pt-4 sm:space-y-4">
-                {filters.author.map((option, optionIdx) => (
-                  <div
-                    key={option.value}
-                    className="flex items-center text-base sm:text-sm"
-                  >
-                    <input
-                      id={`author-${optionIdx}`}
-                      name="author[]"
-                      defaultValue={option.value}
-                      type="checkbox"
-                      className="flex-shrink-0 h-4 w-4 border-gray-300 rounded text-indigo-600 focus:ring-indigo-500"
-                      defaultChecked={option.checked}
-                      onChange={filterChange}
-                    />
-                    <label
-                      htmlFor={`author-${optionIdx}`}
-                      className="ml-3 min-w-0 flex-1 text-gray-900"
-                    >
-                      {option.label}
-                    </label>
-                  </div>
+                {cuisinesAuthor.map((option) => (
+                  <CheckBox
+                    key={option.id}
+                    cuisine={option}
+                    changeChecked={changeCheckedAuthor}
+                  />
                 ))}
               </div>
             </fieldset>
@@ -72,27 +62,12 @@ const ArchiveFilter = ({ filters , filterChange , searchChange }) => {
             <fieldset>
               <legend className="block font-medium">Category</legend>
               <div className="pt-6 space-y-6 sm:pt-4 sm:space-y-4">
-                {filters.category.map((option, optionIdx) => (
-                  <div
-                    key={option.value}
-                    className="flex items-center text-base sm:text-sm"
-                  >
-                    <input
-                      id={`category-${optionIdx}`}
-                      name="category[]"
-                      defaultValue={option.value}
-                      type="checkbox"
-                      className="flex-shrink-0 h-4 w-4 border-gray-300 rounded text-indigo-600 focus:ring-indigo-500"
-                      defaultChecked={option.checked}
-                      onChange={filterChange}
-                    />
-                    <label
-                      htmlFor={`category-${optionIdx}`}
-                      className="ml-3 min-w-0 flex-1 text-gray-600"
-                    >
-                      {option.label}
-                    </label>
-                  </div>
+               {cuisinesCategory.map((option) => (
+                  <CheckBox
+                    key={option.id}
+                    cuisine={option}
+                    changeChecked={changeCheckedCategory}
+                  />
                 ))}
               </div>
             </fieldset>
