@@ -1,5 +1,4 @@
 import { Disclosure } from "@headlessui/react";
-import { useState } from "react";
 import CheckBox from "../../Common/CheckBox";
 import ArchiveSort from "./ArchiveSort";
 import SearchBar from "./SearchBar";
@@ -43,7 +42,7 @@ const ArchiveFilter = ({
         </div>
       </div>
 
-      <Disclosure.Panel className="border-t border-gray-200 py-10">
+      <Disclosure.Panel className="border-t border-gray-200 py-10 ">
         <div className="max-w-7xl mx-auto grid grid-cols-2 gap-x-4 px-4 text-sm sm:px-6 md:gap-x-6 lg:px-8">
           <div className="grid grid-cols-1 gap-y-10 auto-rows-min md:grid-cols-3 md:gap-x-6">
             <fieldset>

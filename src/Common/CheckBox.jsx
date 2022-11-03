@@ -1,9 +1,7 @@
 import React from "react";
 import { Checkbox, FormControlLabel } from "@mui/material";
-import { useState } from "react";
 
 export default function CheckBox({ changeChecked, cuisine }) {
-  const classes = useState();
   const { checked, label, id } = cuisine;
   return (
     <div>

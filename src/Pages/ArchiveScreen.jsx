@@ -80,6 +80,8 @@ export default function ArchiveScreen() {
       updatedList = updatedList.filter((item) =>
         cuisinesCheckedAuthor.includes(item.author)
       );
+      console.log(cuisinesCheckedAuthor);
+
     }
 
     if (cuisinesCheckedCategory.length) {
